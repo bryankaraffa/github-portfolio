@@ -102,5 +102,6 @@ foreach ($events as $event) {
 </body>
 </html>
 <?php
-var_dump($repos);
+// Debugging
+//var_dump($repos);
 ?>      
