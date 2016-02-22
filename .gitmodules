@@ -1,0 +1,6 @@
+[submodule "includes/github-php-client"]
+	path = includes/github-php-client
+	url = https://github.com/tan-tan-kanarek/github-php-client.git
+[submodule "includes/php-markdown"]
+	path = includes/php-markdown
+	url = https://github.com/michelf/php-markdown.git
