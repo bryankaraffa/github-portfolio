@@ -33,7 +33,7 @@ foreach ($events as $event) {
     $repo = $api->get('/repos/'.$event->repo->name);
     $repo = $api->decode($repo);
 
-    if (!isset($repos[$repo->id])) { 
+    if (!isset($repos[$repo->id]) && $repo->{'private'} != true ) {
         $repos[$repo->id]=$repo;
         $r=file_get_contents("https://rawgit.com/".$event->repo->name."/master/README.md");
         if ($r != '') {
@@ -79,12 +79,12 @@ foreach ($events as $event) {
             $card_image='';
         }
         echo ('
-            <div class="card hoverable small">
+            <div class="card hoverable small s12 l6">
                 '.$card_image.'
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4 truncate">'.$repo->full_name.'<i class="material-icons right">more_vert</i></span>
-                    <div class="col s6"><div class="chip left-align">'.$repo->language.'</div></div>
-                    <div class="col s6"><p class="right-align"><a href="'.$repo->html_url.'">Last Updated: '.$repo->updated_at.'</a></p></div>
+                    <span class="chip">'.$repo->language.'</span>
+                    <span><a href="'.$repo->html_url.'">Last Updated: '.$repo->updated_at.'</a></span>
                 </div>
                 <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">'.$repo->full_name.'<i class="material-icons right">close</i></span>
