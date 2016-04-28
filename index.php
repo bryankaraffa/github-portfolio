@@ -72,7 +72,7 @@ foreach ($events as $event) {
 </head>
 
 <body>
-
+<main>
     <div class="container">
         <!-- Page Content goes here -->
 <?php 
@@ -105,6 +105,7 @@ foreach ($events as $event) {
     }
 ?>
     </div>
+    </main>
     <footer class="light-blue page-footer">
           <div class="blue footer-copyright">
             <div class="container">
