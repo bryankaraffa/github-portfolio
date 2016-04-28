@@ -98,7 +98,7 @@ foreach ($events as $event) {
     <footer class="page-footer">
           <div class="footer-copyright">
             <div class="container">
-            Made for fun by <a class="grey-text text-lighten-4 right" href="//github.com/bryankaraffa">bryankaraffa</a>
+            Made for fun by <a class="grey-text text-darken-4" href="//github.com/bryankaraffa">bryankaraffa</a>
             </div>
           </div>
     </footer>
