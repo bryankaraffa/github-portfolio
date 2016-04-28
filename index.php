@@ -95,6 +95,13 @@ foreach ($events as $event) {
     }
 ?>
     </div>
+    <footer class="page-footer">
+          <div class="footer-copyright">
+            <div class="container">
+            Made for fun by <a class="grey-text text-lighten-4 right" href="//github.com/bryankaraffa">bryankaraffa</a>
+            </div>
+          </div>
+    </footer>
   <!-- Compiled and minified JavaScript -->
   <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
