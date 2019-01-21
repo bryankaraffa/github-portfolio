@@ -35,7 +35,7 @@ foreach ($events as $event) {
 
     if (!isset($repos[$repo->id]) && $repo->{'private'} != true ) {
         $repos[$repo->id]=$repo;
-        $r=file_get_contents("https://rawgit.com/".$event->repo->name."/master/README.md");
+        $r=file_get_contents("https://github.com/".$event->repo->name."/raw/master/README.md");
         if ($r != '') {
             $readme[$repo->id]=$r;
         }
@@ -69,6 +69,7 @@ foreach ($events as $event) {
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
 </head>
 
 <body>
@@ -78,10 +79,10 @@ foreach ($events as $event) {
 <?php 
     foreach ($repos as $repo) {
         $readme_content = Markdown::defaultTransform($readme[$repo->id]);
-        if (url_exists('https://rawgit.com/'.$repo->full_name.'/master/screenshot.png')) {
+        if (url_exists('https://github.com/'.$repo->full_name.'/raw/master/screenshot.png')) {
             $card_image= '
                 <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="https://rawgit.com/'.$repo->full_name.'/master/screenshot.png">
+                  <img class="activator" src="https://github.com/'.$repo->full_name.'/raw/master/screenshot.png">
                 </div>
             ';
         }
