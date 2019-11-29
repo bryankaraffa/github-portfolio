@@ -1,6 +1,10 @@
 <?php
-require_once('./config.php');
+$github_Api_Key = $_ENV['GITHUB_API_KEY'];
 error_reporting(0);
+
+if ($_GET['debug'] == "true") {
+    error_reporting(E_ALL);
+}
 
 require_once('./includes/github-api-1.4.3/src/github-api.php');
 use Milo\Github;
@@ -137,5 +141,5 @@ foreach ($events as $event) {
 </html>
 <?php
 // Debugging
-//var_dump($repos);
+if ($_GET['debug'] == "true") { var_dump($repos); }
 ?>      
