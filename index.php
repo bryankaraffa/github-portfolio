@@ -1,5 +1,6 @@
 <?php
-require_once('./config.php');
+$github_Api_Key = $_ENV['github_api_key']
+    
 error_reporting(0);
 
 require_once('./includes/github-api-1.4.3/src/github-api.php');
