@@ -141,5 +141,5 @@ foreach ($events as $event) {
 </html>
 <?php
 // Debugging
-//var_dump($repos);
+if ($_GET['debug'] == "true") { var_dump($repos); }
 ?>      
