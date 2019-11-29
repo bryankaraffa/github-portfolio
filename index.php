@@ -5,7 +5,7 @@ error_reporting(0);
 if ($_GET['debug'] == "true") {
     error_reporting(E_ALL);
     var_dump($github_Api_Key);
-    var_dump($_ENV['github-api-key']);
+    var_dump($_ENV);
 }
 
 require_once('./includes/github-api-1.4.3/src/github-api.php');
