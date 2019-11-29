@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
 
 COPY . /var/www/html/
 
+WORKDIR /var/www/html
+
 RUN \
-   cd /var/www/html/ && \
    git submodule init && \
    git submodule update
