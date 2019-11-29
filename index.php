@@ -1,5 +1,5 @@
 <?php
-$github_Api_Key = $_ENV['github-api-key'];
+$github_Api_Key = $_ENV['GITHUB_API_KEY'];
 error_reporting(0);
 
 if ($_GET['debug'] == "true") {
